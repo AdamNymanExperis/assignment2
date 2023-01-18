@@ -1,6 +1,11 @@
+import Header from "./Header"
+
 const TranslationPage = () => {
     return(
-        <p>testing translation</p>
+        <div>
+            <Header />
+            <p>testing translation</p>
+        </div>
     )
 }
 

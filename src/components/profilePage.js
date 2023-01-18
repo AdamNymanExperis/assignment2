@@ -1,6 +1,12 @@
+import Header from "./Header.js"
+
 const ProfilePage = () => {
     return(
-        <p>testing profile</p>
+        <div>
+            <Header />
+            <p>testing profile</p>
+        </div>
+        
     )
 }
 

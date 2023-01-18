@@ -1,7 +1,7 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import LoginPage from './components/loginPage.js'
-import TranslationPage from './components/translationPage.js';
-import ProfilePage from './components/profilePage.js'
+import LoginPage from './components/LoginPage.js'
+import TranslationPage from './components/TranslationPage.js';
+import ProfilePage from './components/ProfilePage.js'
 
 function App() {
   return (

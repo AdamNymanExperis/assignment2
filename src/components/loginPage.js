@@ -1,6 +1,11 @@
+import Header from './Header.js'
+
 const LoginPage = () => {
     return(
-        <p>testing login</p>
+        <div>
+            <Header />
+            <p>testing login</p>
+        </div>
     )
 }
 

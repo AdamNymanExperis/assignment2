@@ -1,6 +1,7 @@
 import { useForm } from 'react-hook-form'
 import loginUser from '../../api/user'
 import { useState } from 'react'
+import { storageRead, storageSave } from '../../utils/storage'
 
 const LoginInput = () => {
 
@@ -16,10 +17,17 @@ const LoginInput = () => {
         } = useForm()
 
         const [loading, setLoading] = useState(false)
+        const [apiError, setApiError] = useState(null)
 
         const onSubmit = async ({username}) => {
             setLoading(true)
             const [error, user] = await loginUser(username)
+            if(error !== null){
+                setApiError(error)
+            }
+            if(user !==null){
+                storageSave('translator-user', user)
+            }
             console.log('error: ', error)
             console.log('User; ', user)
             setLoading(false)
@@ -49,6 +57,7 @@ const LoginInput = () => {
                 <button type= "submit" disabled={loading}>Start</button>
                 {errorMessage}
                 {loading && <p>Logging in...</p>}
+                {apiError && <p>{apiError}</p>}
             </form>
         </>
     )

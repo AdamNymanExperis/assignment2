@@ -4,7 +4,7 @@ const apiUrl = process.env.REACT_APP_API_URL
 const getUser = async (username) => {
     console.log("in getUser")
     console.log(apiUrl)
-    const response = await fetch(`https://gratis-precious-ringer.glitch.me/translations?username=${username}`)
+    const response = await fetch(`${apiUrl}?username=${username}`)
     try{
         if(!response.ok){
             console.log('in !response')

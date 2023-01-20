@@ -1,4 +1,5 @@
-import { useForm } from "react-hook-form";
+import { useForm } from "react-hook-form"
+import loginUser from "../../api/user"
 
 const LoginInput = () => {
 
@@ -14,8 +15,7 @@ const LoginInput = () => {
         } = useForm()
 
         const onSubmit = (data) => {
-            console.log(data)
-            console.log(data.username)
+            loginUser(data)
         }
 
         const errorMessage = (() => {

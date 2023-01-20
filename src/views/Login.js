@@ -5,7 +5,7 @@ const LoginPage = () => {
 
 
 
-    return(
+    return (
         <div>
             <Header />
             <LoginInput />

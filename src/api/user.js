@@ -2,60 +2,50 @@ import createHeaders from './index.js'
 const apiUrl = process.env.REACT_APP_API_URL
 
 const getUser = async (username) => {
-    console.log("in getUser")
-    console.log(apiUrl)
-    const response = await fetch(`https://gratis-precious-ringer.glitch.me/translations?username=${username}`)
-    try{
-        if(!response.ok){
-            console.log('in !response')
+    const response = await fetch(`${apiUrl}?username=${username}`)
+    try {
+        if (!response.ok) {
             throw new Error('User not found')
         }
-        console.log(response)
         const data = await response.json()
-        console.log('data' + data)
         return [null, data]
 
-    } catch(error) {
+    } catch (error) {
         return [error.message, []]
-    }  
+    }
 }
 
 const createUser = async (username) => {
 
-    console.log('in create user')
-    const response = await fetch(apiUrl,{
-        method:'POST', 
+    const response = await fetch(apiUrl, {
+        method: 'POST',
         headers: createHeaders(),
         body: JSON.stringify({
             username,
             translations: []
         })
-    } )
-    try{
-        if(!response.ok){
+    })
+    try {
+        if (!response.ok) {
             throw new Error('User can not be created')
         }
-        const data = await response.json() 
+        const data = await response.json()
         return [null, data]
 
-    } catch(error) {
+    } catch (error) {
         return [error.message, []]
-    }  
+    }
 }
 
 export const loginUser = async (username) => {
-    
-    const [checkError, user ] = await getUser(username)
-    
-    console.log(checkError)
 
-    if(checkError !== null) {
-        console.log('in error')
-        return [null, user ]
+    const [checkError, user] = await getUser(username)
+
+    if (checkError !== null) {
+        return [null, user]
     }
 
-    if(user.length > 0) {
-        console.log('in user exist')
+    if (user.length > 0) {
         return [null, user.pop()]
     }
 
@@ -63,4 +53,3 @@ export const loginUser = async (username) => {
 }
 
 export default loginUser
-    

@@ -1,7 +1,7 @@
 import Header from "../components/Header"
 
 const TranslationPage = () => {
-    return(
+    return (
         <div>
             <Header />
             <p>testing translation</p>

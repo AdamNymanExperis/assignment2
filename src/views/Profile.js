@@ -5,16 +5,17 @@ import ProfileTranslationHistory from "../components/profile/ProfileTranslationH
 import { useUser } from "../context/UserContext.js"
 import withAuth from "../hoc/withAuth.js"
 
+
 const ProfilePage = () => {
-    
+
     const { user } = useUser()
-    
+
     return (
         <>
             <Header />
-            <ProfileHeaders username={user.username}/>
-            <ProfileActions/>
-            <ProfileTranslationHistory translations={user.translations}/>
+            <ProfileHeaders username={user.username} />
+            <ProfileActions />
+            <ProfileTranslationHistory translations={user.translations} />
             <p>testing profile</p>
         </>
 

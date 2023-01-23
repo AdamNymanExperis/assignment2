@@ -4,11 +4,12 @@ import 'animate.css'
 import '../css/loginPage.css'
 
 const LoginPage = () => {
+
     return (
         <div>
             <Header />
             <h2 id="loginTitle">Enter your name:</h2>
-            <LoginInput />
+            <LoginInput/>
         </div>
     )
 }

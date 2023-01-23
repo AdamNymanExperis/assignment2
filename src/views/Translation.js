@@ -1,4 +1,5 @@
 import Header from "../components/Header"
+import withAuth from "../hoc/withAuth"
 
 const TranslationPage = () => {
     return (
@@ -8,5 +9,4 @@ const TranslationPage = () => {
         </div>
     )
 }
-
-export default TranslationPage
+export default withAuth(TranslationPage) 

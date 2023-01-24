@@ -1,14 +1,28 @@
 import { useState } from "react"
 import { useForm } from "react-hook-form"
+import patchTranslations from "../../api/translation"
+import { useUser } from "../../context/UserContext"
+import { storageSave } from "../../utils/storage"
+import { STORAGE_KEY_USER } from "../../const/storageKeys"
 
 const TranslationInput = () => {
+
+    const { user, setUser } = useUser()
 
     const [translationArray, setTranslationArray] = useState([])
 
     const { register, handleSubmit, formState: { errors } } = useForm() 
 
-    const onSubmit = ({translation}) => {
-        setTranslationArray(Array.from(translation))       
+    const onSubmit = async ({translation}) => {
+        setTranslationArray(Array.from(translation))
+        const [error, patchResponse] = await patchTranslations(translation, user.translations, user.id)
+        if (error !== null) {
+            
+        }
+        if (patchResponse !== null) {
+            storageSave(STORAGE_KEY_USER, patchResponse)
+            setUser(patchResponse)
+        }  
     }
     
     return (

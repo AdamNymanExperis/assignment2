@@ -41,7 +41,6 @@ const LoginInput = () => {
             setUser(userResponse)
         }
         setLoading(false)
-
     }
 
 

@@ -3,6 +3,7 @@ import withAuth from "../hoc/withAuth"
 import TranslationInput from "../components/translations/TranslationInput"
 
 const TranslationPage = () => {
+
     return (
         <div>
             <Header />

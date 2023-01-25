@@ -4,12 +4,22 @@ import { STORAGE_KEY_USER } from '../const/storageKeys.js'
 const apiUrl = process.env.REACT_APP_API_URL
 
 
-const patchTranslations = async (newTranslation, translations, id) => {
+const addTranslations = async (newTranslation, translations, id) => {
+    const translationsWithNew = [...translations, newTranslation]
+    return patch(translationsWithNew, id)
+}
+
+const clearTranslations = async (id) => {
+    const emptyArray = []
+    return patch(emptyArray, id)
+}
+
+const patch = async (translations, id) => {
     const response = await fetch(`${apiUrl}/${id}`, {
         method: 'PATCH', 
         headers: createHeaders(),
         body: JSON.stringify({
-            translations: [...translations, newTranslation] 
+            translations: [...translations] 
         })
     })
     try {
@@ -22,7 +32,13 @@ const patchTranslations = async (newTranslation, translations, id) => {
     } catch (error) {
         return [error.message, []]
     }
+}
 
+
+
+const patchTranslations = {
+    addTranslations,
+    clearTranslations
 }
 
 export default patchTranslations

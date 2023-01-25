@@ -20,10 +20,10 @@ const ProfileTranslationHistory = ({ translations }) => {
   ))
 
   return (
-    <>
+    <div>
       <p>Translation history</p>
       <ul>{translationList}</ul>
-    </>
+    </div>
   )
 }
 export default ProfileTranslationHistory

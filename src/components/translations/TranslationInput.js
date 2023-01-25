@@ -17,6 +17,7 @@ const TranslationInput = () => {
   } = useForm()
 
   const onSubmit = async ({ translation }) => {
+
     setTranslationArray(Array.from(translation))
     const [error, patchResponse] = await patchTranslations.addTranslations(
       translation,
@@ -33,13 +34,17 @@ const TranslationInput = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <input
-        type="text"
-        {...register("translation")}
-        placeholder="Enter your text"
-      />
-      <button type="submit">Translate</button>
-      <div>
+      <div class="inputDiv">
+        <input
+          type="text"
+          {...register("translation")}
+          maxLength="40"
+          placeholder="Enter your text"
+        />
+        <button type="submit">Translate</button>
+      </div>
+      
+      <div id='translationBox'>
         {translationArray.map((letter, index) => (
           <img
             key={index}

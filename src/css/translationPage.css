@@ -1,0 +1,13 @@
+#translationBox{
+    border: 10px solid var(--tertiary);
+    margin: 10px;
+    height: 250px;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 15px;
+}
+
+#translationBox img{
+    width:70px;
+    height: auto;
+}

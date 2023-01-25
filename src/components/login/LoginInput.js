@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form"
 import loginUser from "../../api/user"
 import { useState, useEffect } from "react"
-import { storageRead, storageSave } from "../../utils/storage"
+import { storageSave } from "../../utils/storage"
 import { useUser } from "../../context/UserContext"
 import { useNavigate } from "react-router-dom"
 import { STORAGE_KEY_USER } from "../../const/storageKeys"

@@ -6,7 +6,6 @@ const TranslationPage = () => {
   return (
     <div>
       <Header />
-      <p>testing translation</p>
       <section id="">
         <TranslationInput />
       </section>

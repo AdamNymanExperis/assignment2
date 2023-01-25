@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import { STORAGE_KEY_USER } from "../../const/storageKeys"
 import { useUser } from "../../context/UserContext"
 import { storageSave, storageDelete } from "../../utils/storage"
@@ -28,9 +27,6 @@ const ProfileActions = () => {
 
   return (
     <ul>
-      <li>
-        <Link to="/translation">Translations</Link>
-      </li>
       <li>
         <button onClick={handleClearClick}>Clear history</button>
       </li>

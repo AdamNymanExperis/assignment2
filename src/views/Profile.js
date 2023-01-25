@@ -14,7 +14,6 @@ const ProfilePage = () => {
       <ProfileHeaders username={user.username} />
       <ProfileActions />
       <ProfileTranslationHistory translations={user.translations} />
-      <p>testing profile</p>
     </>
   )
 }

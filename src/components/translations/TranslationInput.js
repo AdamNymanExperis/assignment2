@@ -1,9 +1,9 @@
 import { useState } from "react"
 import { useForm } from "react-hook-form"
-import patchTranslations from "../../api/translation"
 import { useUser } from "../../context/UserContext"
 import { storageSave } from "../../utils/storage"
 import { STORAGE_KEY_USER } from "../../const/storageKeys"
+import patchTranslations from '../../api/translation.js'
 
 const TranslationInput = () => {
 
@@ -15,7 +15,7 @@ const TranslationInput = () => {
 
     const onSubmit = async ({translation}) => {
         setTranslationArray(Array.from(translation))
-        const [error, patchResponse] = await patchTranslations(translation, user.translations, user.id)
+        const [error, patchResponse] = await patchTranslations.addTranslations(translation, user.translations, user.id)
         if (error !== null) {
             
         }

@@ -3,15 +3,14 @@ import withAuth from "../hoc/withAuth"
 import TranslationInput from "../components/translations/TranslationInput"
 
 const TranslationPage = () => {
-
-    return (
-        <div>
-            <Header />
-            <p>testing translation</p>
-            <section id="">
-                <TranslationInput />
-            </section>
-        </div>
-    )
+  return (
+    <div>
+      <Header />
+      <p>testing translation</p>
+      <section id="">
+        <TranslationInput />
+      </section>
+    </div>
+  )
 }
-export default withAuth(TranslationPage) 
+export default withAuth(TranslationPage)

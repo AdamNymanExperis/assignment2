@@ -61,7 +61,7 @@ const LoginInput = () => {
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div class="inputDiv">
+        <div className="inputDiv">
           <input
             type="text"
             placeholder="Enter name"

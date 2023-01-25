@@ -9,7 +9,7 @@ const ProfilePage = () => {
   const { user } = useUser()
 
   return (
-    <div class="content">
+    <div className="content">
       <ProfileHeaders username={user.username} />
       <ProfileActions />
       <ProfileTranslationHistory translations={user.translations} />

@@ -4,7 +4,7 @@ import "../css/loginPage.css"
 
 const LoginPage = () => {
   return (
-    <div class="content">
+    <div className="content">
       <h2 id="loginTitle">Enter your name:</h2>
       <LoginInput />
     </div>

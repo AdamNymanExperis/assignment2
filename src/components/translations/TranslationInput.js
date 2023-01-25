@@ -5,10 +5,15 @@ import { storageSave } from "../../utils/storage"
 import { STORAGE_KEY_USER } from "../../const/storageKeys"
 import patchTranslations from "../../api/translation.js"
 
+const translationConfig = {
+  maxLength: 40,
+}
+
 const TranslationInput = () => {
   const { user, setUser } = useUser()
 
   const [translationArray, setTranslationArray] = useState([])
+  const [apiError, setApiError] = useState(null)
 
   const {
     register,
@@ -17,14 +22,15 @@ const TranslationInput = () => {
   } = useForm()
 
   const onSubmit = async ({ translation }) => {
-
     setTranslationArray(Array.from(translation))
     const [error, patchResponse] = await patchTranslations.addTranslations(
       translation,
       user.translations,
       user.id
     )
+
     if (error !== null) {
+      setApiError(error)
     }
     if (patchResponse !== null) {
       storageSave(STORAGE_KEY_USER, patchResponse)
@@ -32,19 +38,32 @@ const TranslationInput = () => {
     }
   }
 
+  const errorMessage = (() => {
+    if (!errors.translation) {
+      return null
+    }
+    if (errors.translation.type === "maxLength") {
+      return (
+        <span>Translation has too many characters. Max 40 characters!</span>
+      )
+    }
+  })()
+
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <div class="inputDiv">
+      <div className="inputDiv">
         <input
           type="text"
-          {...register("translation")}
-          maxLength="40"
+          {...register("translation", translationConfig)}
           placeholder="Enter your text"
         />
         <button type="submit">Translate</button>
       </div>
-      
-      <div id='translationBox'>
+
+      {errorMessage}
+      {apiError && <p>{apiError}</p>}
+
+      <div id="translationBox">
         {translationArray.map((letter, index) => (
           <img
             key={index}

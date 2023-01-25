@@ -1,8 +1,6 @@
-import ProfileAvatar from "./ProfileAvatar.js"
 import "animate.css"
 import "../css/header.css"
 
-//<ProfileAvatar />
 const Header = () => {
   return (
     <header>

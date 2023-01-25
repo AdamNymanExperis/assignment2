@@ -6,9 +6,6 @@ const Navbar = () => {
 
   return (
     <nav>
-      <ul>
-        <li>Translation</li>
-      </ul>
       {user !== null && (
         <ul>
           <li>

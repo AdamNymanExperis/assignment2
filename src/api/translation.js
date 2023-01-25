@@ -1,6 +1,5 @@
 import createHeaders from "./index.js"
-import { useUser } from "../context/UserContext"
-import { STORAGE_KEY_USER } from "../const/storageKeys.js"
+
 const apiUrl = process.env.REACT_APP_API_URL
 
 const addTranslations = async (newTranslation, translations, id) => {

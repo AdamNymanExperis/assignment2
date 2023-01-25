@@ -1,8 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap');
+@import url('index.css');
 
 header {
+    background-color: var(--primary);
+    height: 50px;
+    border-bottom:5px solid var(--primaryBorder);
     
 }
 
 #title{
-    
+    font-family: 'Love Ya Like A Sister', cursive;
+    color: var(--secondary);
+    margin-top: 0;
+    padding-top:  15px;
+    padding-left: 60px;
+    font-size: medium;    
 }

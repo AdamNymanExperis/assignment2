@@ -7,8 +7,6 @@ const Header = () => {
   return (
     <header>
       <h1 id="title">Lost in Translation</h1>
-
-      <ProfileAvatar />
     </header>
   )
 }

@@ -1,26 +1,23 @@
 import { NavLink } from "react-router-dom"
 import { useUser } from "../../context/UserContext"
+import "../../css/navbar.css"
 
 const Navbar = () => {
+  const { user } = useUser()
 
-    const { user } = useUser()
-
-    return (
-        <nav>
-            <ul>
-                <li>Translation</li>
-            </ul>
-            {user !== null &&
-                <ul>
-                    <li>
-                        <NavLink to="/translation">Translation</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/profile">Profile</NavLink>
-                    </li>
-                </ul>
-            }
-        </nav>
-    )
+  return (
+    <nav>
+      {user !== null && (
+        <ul id = "navList">
+          <li>
+            <NavLink to="/translation">Translation</NavLink>
+          </li>
+          <li>
+            <NavLink to="/profile">Profile</NavLink>
+          </li>
+        </ul>
+      )}
+    </nav>
+  )
 }
 export default Navbar

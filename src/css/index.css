@@ -1,3 +1,12 @@
+:root {
+  --primary: #FFC75F;
+  --secondary: #FFFFFF;
+  --tertiary:  #845EC2;
+  --inputBorder: #BFBFBF;
+  --inputField: #EFEFEF;
+  --primaryBorder: #E7B355;
+ } 
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +19,32 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.content{
+  text-align: center;
+}
+
+.inputDiv{
+  border: 5px solid var(--inputBorder);
+  border-radius: 15px;
+  padding: 5px;
+  background-color: var(--inputField);
+  width: 300px;
+  margin-left: 35%;
+}
+
+button{
+  background-color: var(--tertiary);
+  border: 5px solid var(--tertiary);
+  border-radius: 15px;
+  color: var(--secondary);
+  margin: 5px;
+}
+
+.inputDiv input {
+  border:none;
+  margin-right: 10px;
+  background-color: var(--inputField);
+  padding: 5px;
 }

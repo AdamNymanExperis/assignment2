@@ -26,14 +26,11 @@ const ProfileActions = () => {
   }
 
   return (
-    <ul>
-      <li>
-        <button onClick={handleClearClick}>Clear history</button>
-      </li>
-      <li>
-        <button onClick={handleLogoutClick}>Log out</button>
-      </li>
-    </ul>
+    <div>
+      <button onClick={handleClearClick}>Clear history</button>
+      <br></br>
+      <button onClick={handleLogoutClick}>Log out</button>
+    </div> 
   )
 }
 export default ProfileActions

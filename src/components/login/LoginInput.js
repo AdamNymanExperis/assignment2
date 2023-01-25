@@ -61,14 +61,16 @@ const LoginInput = () => {
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <input
-          type="text"
-          placeholder="Enter name"
-          {...register("username", usernameConfig)}
-        />
-        <button type="submit" disabled={loading}>
-          Start
-        </button>
+        <div class="inputDiv">
+          <input
+            type="text"
+            placeholder="Enter name"
+            {...register("username", usernameConfig)}
+          />
+          <button type="submit" disabled={loading}>
+            Start
+          </button>
+        </div>
         {errorMessage}
         {loading && <p>Logging in...</p>}
         {apiError && <p>{apiError}</p>}

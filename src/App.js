@@ -4,6 +4,7 @@ import TranslationPage from "./views/Translation.js"
 import ProfilePage from "./views/Profile.js"
 import Header from "./components/Header.js"
 import Navbar from "./components/Navbar/Navbar.js"
+import EasterEgg from "./aEasterEgg/EasterEgg.js"
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<LoginPage />} />
         <Route path="/translation" element={<TranslationPage />} />
         <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/easterEgg" element={<EasterEgg />} />
       </Routes>
     </BrowserRouter>
   )

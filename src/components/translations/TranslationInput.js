@@ -10,17 +10,19 @@ const translationConfig = {
 }
 
 const TranslationInput = () => {
-  const { user, setUser } = useUser()
-
-  const [translationArray, setTranslationArray] = useState([])
-  const [apiError, setApiError] = useState(null)
-
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm()
+  
+  const { user, setUser } = useUser()
+  
+  //localstates
+  const [translationArray, setTranslationArray] = useState([])
+  const [apiError, setApiError] = useState(null)
 
+  //handlers
   const onSubmit = async ({ translation }) => {
     setTranslationArray(Array.from(translation))
     const [error, patchResponse] = await patchTranslations.addTranslations(

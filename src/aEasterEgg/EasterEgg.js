@@ -63,9 +63,9 @@ const EasterEgg = () => {
         if(playerHand === pcHand){
             setMsg('Euh!! Draw')
         } else if( 
-            playerHand === 'b' && pcHand === 'k' ||
-            playerHand === 'k' && pcHand === 'e' ||
-            playerHand === 'e' && pcHand === 'b'){
+            ((playerHand === 'b' && pcHand === 'k') ||
+            (playerHand === 'k' && pcHand === 'e') ||
+            (playerHand === 'e' && pcHand === 'b'))){
             setMsg('I won!')
         } else {
             setMsg('Oh no! I lost!')

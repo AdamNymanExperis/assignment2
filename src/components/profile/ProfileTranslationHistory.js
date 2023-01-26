@@ -1,5 +1,6 @@
 import ProfileTranslationHistoryItem from "./ProfileTranslationHistoryItem"
 
+/* gets the last 10 translations from a user and displays them as a list */
 const ProfileTranslationHistory = ({ translations }) => {
   let tenLastTranslations = []
   let spliceTranslations = [...translations]

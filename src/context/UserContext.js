@@ -8,6 +8,7 @@ export const useUser = () => {
   return useContext(UserContext)
 }
 
+/* creates a user context from data in the local storage */
 const UserProvider = ({ children }) => {
   const [user, setUser] = useState(storageRead(STORAGE_KEY_USER))
 

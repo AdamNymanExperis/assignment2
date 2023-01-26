@@ -34,6 +34,17 @@ code {
   margin-left: 35%;
 }
 
+.inputDiv input {
+  border:none;
+  margin-right: 10px;
+  background-color: var(--inputField);
+  padding: 5px;
+}
+
+.inputDiv input:focus{
+  background-color: var(--inputField);
+}
+
 button{
   background-color: var(--tertiary);
   border: 5px solid var(--tertiary);
@@ -42,9 +53,3 @@ button{
   margin: 5px;
 }
 
-.inputDiv input {
-  border:none;
-  margin-right: 10px;
-  background-color: var(--inputField);
-  padding: 5px;
-}

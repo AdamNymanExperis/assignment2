@@ -5,9 +5,14 @@
     margin-left: 10%;
     margin-right: 10%;
     border-radius: 15px;
+    box-shadow: 7px 7px 5px var(--inputBorder);
 }
 
 #translationBox img{
     width:70px;
     height: auto;
+}
+
+#translationTextBox{
+    margin: auto;
 }

@@ -1,5 +1,10 @@
-
-ul { 
-	display: inline-block; 
-	text-align: left; 
+@counter-style hands {
+    system: cyclic;
+    symbols: "\261D" "\270C" "\1F596" "\1F44A" "\270B" "\1F919" "\1F91E" "\1F91F" "\1F44D" "\1F450" ;
+    suffix: " ";
+  }
+ul {
+    list-style-type: hands;
+    display: inline-block;
+	padding:0;
 }

@@ -53,13 +53,16 @@ const TranslationInput = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <div className="inputDiv">
-        <input
-          type="text"
-          {...register("translation", translationConfig)}
-          placeholder="Enter your text"
-        />
-        <button type="submit">Translate</button>
+      <div id="translationTextBox">
+        <h1>Translation</h1>
+        <div className="inputDiv">
+          <input
+            type="text"
+            {...register("translation", translationConfig)}
+            placeholder="Enter your text"
+          />
+          <button type="submit">Translate</button>
+        </div>
       </div>
 
       {errorMessage}

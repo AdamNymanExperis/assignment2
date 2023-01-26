@@ -12,7 +12,6 @@ const ProfileTranslationHistory = ({ translations }) => {
   } else {
     tenLastTranslations = translations
   }
-  tenLastTranslations.reverse()
   const translationList = tenLastTranslations.map((translation, index) => (
     <ProfileTranslationHistoryItem
       key={index + "-" + translation}

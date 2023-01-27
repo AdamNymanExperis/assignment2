@@ -1,6 +1,6 @@
 import LoginInput from "../components/login/LoginInput.js"
 import "animate.css"
-import "../css/loginPage.css"
+import "./loginPage.css"
 
 const LoginPage = () => {
   return (

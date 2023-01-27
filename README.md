@@ -5,7 +5,7 @@ This project is for the second assignment at Experis Academy. It is an online si
 It contains a startup page, a translation page and a profile page. The user must first sign up on the startup page and will then be created in the database hosted on glich. After the user has been saved they can enter a word or sentance (up to 80 characters) which will then be translated and displayed in a box area under the input. On the users profile page the last up to ten translations they have entered are displayed in a list.
 
 ## deployment
-The project is deployed on the following [url](https://assignment2-nine.vercel.app/profile)
+The project is deployed on the following url: [Lost in Translation](https://assignment2-nine.vercel.app)
 
 ### Running the application
 To run the application as a localhost you only need to have nodejs installed. [Download nodejs.](https://nodejs.org/en/)

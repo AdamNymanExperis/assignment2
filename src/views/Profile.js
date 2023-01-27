@@ -3,7 +3,7 @@ import ProfileHeaders from "../components/profile/ProfileHeader.js"
 import ProfileTranslationHistory from "../components/profile/ProfileTranslationHistory.js"
 import { useUser } from "../context/UserContext.js"
 import withAuth from "../hoc/withAuth.js"
-import "../css/profilePage.css"
+import "./profilePage.css"
 
 const ProfilePage = () => {
   const { user } = useUser()

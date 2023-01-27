@@ -1,6 +1,6 @@
 import withAuth from "../hoc/withAuth"
 import TranslationInput from "../components/translations/TranslationInput"
-import "../css/translationPage.css"
+import "./translationPage.css"
 
 const TranslationPage = () => {
   return (

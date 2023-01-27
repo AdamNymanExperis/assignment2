@@ -3,7 +3,6 @@ import { useState } from "react"
 import "./EasterEgg.css"
 
 //rock = e, scissors = k, paper = b
-
 const EasterEgg = () => {
     const [ hand, setHand ] = useState('b')
     const [ message, setMsg ] = useState('Hello there, Wanna play "Rock, Paper, Scissors"?')

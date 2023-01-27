@@ -1,5 +1,5 @@
 import "animate.css"
-import "../css/header.css"
+import "./header.css"
 
 const Header = () => {
   return (
